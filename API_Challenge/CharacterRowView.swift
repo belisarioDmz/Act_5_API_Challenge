@@ -1,7 +1,6 @@
 import SwiftUI
 
-//Celda de la lista: una fila con la imagen pequeña del personaje,
-//su nombre y su estado (Alive / Dead / unknown).
+//Celda de la lista: una fila con la imagen pequeña del personaje y su nombre.
 struct CharacterRowView: View {
 
     //El personaje que esta fila va a mostrar.
@@ -24,11 +23,10 @@ struct CharacterRowView: View {
             .frame(width: 56, height: 56)
             .clipShape(RoundedRectangle(cornerRadius: 10))
 
-            //Nombre y estado, uno debajo del otro.
-            VStack(alignment: .leading, spacing: 4) {
-                Text(character.name)
-                    .font(.headline)
-            }
+            //Nombre del personaje
+            Text(character.name)
+                .font(.headline)
+            
         }
         .padding(.vertical, 4)
     }
