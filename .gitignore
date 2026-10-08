@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Xcode - User settings y datos de build que no se comparten
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+
+# Build / derived data
+build/
+DerivedData/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# CocoaPods / Carthage (por si acaso en el futuro)
+Pods/
+Carthage/Build/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
