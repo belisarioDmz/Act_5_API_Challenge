@@ -41,8 +41,10 @@ class CharacterViewModel {
             characters = try await service.fetchCharacters()
         } catch {
             //Si el Service lanzó un error (sin internet, respuesta inválida...) caemos aquí.
-            //Guardamos un mensaje y vaciamos la lista para no mostrar datos viejos.
-            errorMessage = "No se pudieron cargar los personajes. Revisa tu conexión e intenta de nuevo."
+            //Cada ServiceError ya trae su propio mensaje legible (errorDescription),
+            //así que lo tomamos de error.localizedDescription en vez de inventar texto aquí.
+            //Vaciamos la lista para no mostrar datos viejos.
+            errorMessage = error.localizedDescription
             characters = []
         }
 
